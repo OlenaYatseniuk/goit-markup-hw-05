@@ -224,6 +224,15 @@ header{
     cursor: pointer;
     color: var(--second-accent-color);
     background-color: var(--accent-color);
+    box-shadow: none;
+
+    transition: background-color 250ms var(--animation-movement);
+}
+
+.hero-button:hover,
+.hero-button:focus{
+    background-color: #146cb4;
+
 }
 
 .hero-img{
@@ -613,10 +622,6 @@ header{
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* .filter.active{
-    background-color: var(--accent-color);
-    color: var(--second-accent-color);
-} */
 
 /* project section */
 .projects-list{
@@ -744,7 +749,10 @@ header{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms var(--animation-movement);
+    visibility: visible;
+
+    transition: opacity 250ms var(--animation-movement),
+     visibility 250ms var(--animation-movement);
 }
 
 .backdrop.is-hidden{
@@ -761,7 +769,6 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     min-width: 528px;
     min-height: 581px;
@@ -774,16 +781,36 @@ header{
     transition: transform 250ms var(--animation-movement);
 }
 
-.modal-icon{
+.btn-close{
     position: absolute;
     top: 0;
     right: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
-
     margin-top: 8px;
     margin-right: 8px;
 
+    background-color: var(--second-accent-color);
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.102);
     cursor: pointer;
+
+}
+
+.modal-icon{
+
+    width: 11px;
+    height: 11px;
+
+    transition: fill 250ms var(--animation-movement);
+}
+
+
+.btn-close:hover .modal-icon,
+.btn-close:focus .modal-icon{
+    fill: var(--accent-color);
 }
