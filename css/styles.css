@@ -771,8 +771,7 @@ header{
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
 
-    transition: transform 250ms var(--animation-movement),
-    opacity 250ms var(--animation-movement);
+    transition: transform 250ms var(--animation-movement);
 }
 
 .modal-icon{
